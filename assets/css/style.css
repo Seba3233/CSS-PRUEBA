@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+nav {
+    padding: 10px 2px 10px 2px;
+    grid-area: menu;
+    background-color: #22577a  ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #c7f9cc;
+
+}
+.ocultar-header {
+    grid-area: header;
+    background-color: #57cc99;
+    display: none;
+    
+}
+
+.menu-item {
+    padding: 5px;
+    color: #c7f9cc;
+    
+}
+
+main {
+    padding: 15px;
+    grid-area: gallery;
+    background-color: #38a3a5;
+}
+.bg {
+    padding: 10px;
+    padding-top: 0px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.5s;
+}
+.title-card {
+    height: 30px   ;
+}
+.text-card {
+    height: 30px;
+    display: none;
+    background: transparent;
+    transition: display 1s;
+    color: #c7f9cc;
+}
+
+.bg:hover {
+    background-color: #57cc99;
+    
+}
+.bg:hover button {
+    color: brown;
+}
+.bg:hover .text-card {
+    color: #c7f9cc;
+    background-color: #38a3a5;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px;
+}
+
+.imagen1 {
+    background-image: url(../images/alimento-de-perros.png);
+    grid-area: a;
+    
+}
+.imagen2 {
+    background-image: url(../images/casa-perro.png);
+    grid-area: b;
+}
+.imagen3 {
+    background-image: url(../images/Rascador.png);
+    grid-area: c;
+}
+.imagen4 {
+    background-image: url(../images/arnes.png);
+    grid-area: d;
+}
+.imagen5 {
+    background-image: url(../images/cama.png);
+    grid-area: e;
+}
+.imagen6 {
+    background-image: url(../images/snack.png);
+    grid-area: f;
+}
+.imagen7 {
+    background-image: url(../images/hueso-goma.png);
+    grid-area: g;
+}
+.imagen8 {
+    background-image: url(../images/arenenro.png);
+    grid-area: h;
+}
+footer {
+    padding: 10px;
+    display: flex;
+    grid-area: footer;
+    background-color: #57cc99;
+    
+    justify-content: center;
+    
+}
+.footer-icon {
+    height: 20px;
+    padding-left: 30px;
+    padding-right: 10px;
+}
+.gallery {
+    display: grid;
+    grid-template-areas:  
+        "a";
+    /* display: flex; */
+    height: 100% ;
+    /* flex-direction: column; */
+}
+
+.grid-container {
+    /* height: 100%; */
+    display: grid;
+    border: 1px solid black;
+    grid-template-rows: 1fr 12fr 1fr;
+    grid-template-areas: 
+        "menu"
+        "gallery"
+        "footer";
+    
+}
+.ocultar {
+    display: none;
+}
+@media (min-width: 576px){
+    .grid-container {
+        grid-template-areas: 
+            "menu header"
+            "menu gallery"
+            "menu gallery"
+            "menu footer ";
+        grid-template-columns: 1fr 10fr;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+        padding-bottom: 200px;
+    }
+    .gallery {
+        grid-template-areas: 
+        "a b c d"
+        "e f g h";
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-row: 1fr 1fr;
+        gap: 20px;
+    }
+    .ocultar-header {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+    }
+    .ocultar {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .bg {
+        background-size: 70%;
+        background-repeat: no-repeat;
+    }
+    .menu-item {
+        height: 50px;
+        align-items:  center ;
+    }
+    .fa-solid {
+        font-size: 30px ;
+    }
+
+}
+
+
+
+
+
+
+
